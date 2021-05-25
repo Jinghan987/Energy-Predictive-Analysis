@@ -9,7 +9,7 @@ The flow of the project is as such :
 
 3) I also noted down the categorical and continuous variables that are present in the dataframe.
 
-4) This is followed by a correlation heatmap - this helps me decide if certain variables should be included. Highly correlated variables will likely cause multicollinearity and as such, one of the variables should be removed. 
+4) This is followed by a correlation heatmap - this helps me decide if certain variables should be included. Highly correlated variables will likely cause multicollinearity and as such, one of the variables should be removed. In this scenario, there are no highly correlated variables. Hence, I will still continue with predicting using all the variables.
 
 5) One hot encoding was then used to represent the categorical variables, else the variables will cause some problems to the ML models.
 
@@ -21,6 +21,6 @@ The flow of the project is as such :
 
 10) RMSE was used as a metric as it allows for more accurate results and is also easy for interpretation. For example, if the RMSE for SVR is x, then we can interpret it as the predicted results deviating from the actual result by x MW.  
 
-11) After step 9, we pick the models and their respective parameters with the lowest RMSE and use the model to predict the demand of electricity in 2020 (test data).
+11) After step 9, we pick the models and their respective parameters with the lowest RMSE and use the model to predict the demand of electricity in 2020 (test data). K-Nearest Regressors SVR (rbf kernel), SVR (poly kernel) are used in the predicting the demand of electricity.
 
-12) After that, a graph showing the predicted vs actual demand in 2020 was plot and the best model was determined from the graph.
+12) After that, a graph showing the predicted vs actual demand in 2020 was plot and the best model was determined from the graph. Since predicted values using SVR (rbf kernel) does not have erratic spikes/ extreme values, I believe that we can use SVR (rbf kernel) to predict electricity demand.
