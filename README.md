@@ -17,10 +17,12 @@ The flow of the project is as such :
 
 7) Scaling of the continuous variables in the train, validation and test data is then conducted after step 6. Reason for this is so that we avoid the problem of data leakage.
 
-9) After step 7, we feed the training data into different models and tweak the parameters of the models using the validation data until we reach the optimum point (lowest rmse for each of the model).
+8) After step 7, we feed the training data into different models and tweak the parameters of the models using the validation data until we reach the optimum point (lowest rmse for each of the model).
 
-10) RMSE was used as a metric as it allows for more accurate results and is also easy for interpretation. For example, if the RMSE for SVR is x, then we can interpret it as the predicted results deviating from the actual result by x MW.  
+9) RMSE was used as a metric as it allows for more accurate results and is also easy for interpretation. For example, if the RMSE for SVR is x, then we can interpret it as the predicted results deviating from the actual result by x MW.  
 
-11) After step 9, we pick the models and their respective parameters with the lowest RMSE and use the model to predict the demand of electricity in 2020 (test data). K-Nearest Regressors SVR (rbf kernel), SVR (poly kernel) are used in the predicting the demand of electricity.
+10) After step 9, we pick the models and their respective parameters with the lowest RMSE and use the model to predict the demand of electricity in 2020 (test data). K-Nearest Regressors SVR (rbf kernel), SVR (poly kernel) are used in the predicting the demand of electricity.
 
-12) After that, a graph showing the predicted vs actual demand in 2020 was plot and the best model was determined from the graph. Since predicted values using SVR (rbf kernel) does not have erratic spikes/ extreme values, I believe that we can use SVR (rbf kernel) to predict electricity demand.
+11) After that, a graph showing the predicted vs actual demand in 2020 was plot and the best model was determined from the graph. Since predicted values using SVR (rbf kernel) does not have erratic spikes/ extreme values, I believe that we can use SVR (rbf kernel) to predict electricity demand.
+
+![image](https://user-images.githubusercontent.com/64594029/120174910-377f9f80-c238-11eb-8935-ca190b1266ee.png)
